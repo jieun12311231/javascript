@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //🍓if문 연습🍓
+        // let walkAmount = prompt("하루에 걷는 양은 몇 보?");
+
+        // if(walkAmount > 10000){
+        //     document.write("아주 훌륭합니다.~!~!💛🍓<br>");
+        // } else{
+        //     document.write("노력하세요.ㅜㅜ<br>");
+        // }
+
+        // let useName = prompt("방문자의 이름은?");
+        // if( useName  != "smith"){    //smith 가 접근하면 반갑습니다 출력되지 않음
+        //     document.write(useName + "님 반갑습니다.");
+        // }
+        // let result = confirm("정말로 탈퇴하시겠습니까?")  //팝업창의 확인은 true/ 취소는 flase
+        // if (result){
+        //     alert("탈퇴완료");
+        // } else{
+        //     alert("탈퇴 처리 취소");
+        // }
+
+
+        //🍓중첩 if문 연습🍓
+        //간단한 ID/PW확인절차
+        let id = "지은";
+        let pw = "1234";
+        let userId = prompt("아이디는?");
+        let userPw = prompt("비밀번호는?");
+        if(id == userId){
+            if(pw == userPw){
+                document.write(userId + "님 반갑습니다.😆");
+            } else{
+                alert(userId + "님 비밀번호가 틀렸습니다.🙄");
+                location.reload();  // 페이지 재시작
+            }
+        }else {
+            alert("아이디가 틀렸습니다.🙄");
+            location.reload();  // 페이지 재시작
+        }
+    </script>
+</body>
+</html>

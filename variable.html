@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // console.log(number2);  //오류는 뜨지 않지만 undefined
+
+        // let number = 1;     // number = 1  1을 대입연산자라고 부름.   오른쪽에 있는 1이 왼쪽의 num에 대입
+        // //변수를 1로 초기화 시켜줌 최초의 데이터를 넣는걸 초기화라고 함.
+        // console.log(number);
+
+        // number =2;     //number =2
+        // number =3;     //number =3    여러가지 변수로 재사용 가능함.
+        // //컴퓨터는 오른쪽으로 왼쪽으로 읽음 >> 숫자 2를 number에 넣는다> 숫자3을 number에 넣는다. 숫자 2에 덮어써짐.
+
+        // var number2 = 2;   //변수를 2로 초기화
+        // console.log(number2);
+
+        // const number3 = 10;
+        // number3 = 100;
+        
+        // let studentCount = 2;
+
+        //원시형 데이터 타입
+
+        //p28 1.숫자형  - 변수에 숫자가 들어가는 경우/변수는 중복 되면 안됨. 독자적이어야함.
+        //     let num = 1;
+        //     let num2 = 2;
+        //     console.log(typeof num);  //typeof: 콘솔에서 어떤 타입인지 확인 해줌
+        // //2.문자형 -변수에 문자가 들어가는 경우
+        // let str = 'javascript';
+        // let str2 = "javascript";  //자스에서는 ''과 "" 같음
+        // console.log(typeof str);
+
+        // //3.불리언(bool) - true / flase 존재, 참 거짓을 판단할때 사용 
+        // let bool = true; //참
+        // let bool2 = false;  //거짓
+        // console.log(typeof bool);
+
+        // //4.심볼  잘 사용하지않고 어렵기때문에 skip 다음에 배울 예정
+        // //5.null  빈값(변수를 초기화 하지않았다.)
+        // let variable =null;  //변수가 초기화 되지 않아서 빈 깡통 0이 아닌 빈 값. 데이터가 존재하는 것도 아님, 비어있지만 쓰지않는 데이터가 들어있음.
+        // console.log(variable);  //null은 하나의 객체로 생각하면 됨. typeof를 쓰지않은 것은 데이터를 찍어보기위해서 쓰지않음. 
+        
+        // //6.undefined - 변수 자체가 아예 선언되지 않은 것 
+        // console.log(data);  //data라는 변수를 선언한적이 없기때문에 콘솔 창에 undefined라고 뜸
+
+        // //7.NaN - not a number (숫자가 아니다.) 혼자 사용 하지 않음/ 문자를 숫자로 바꾸는데 숫자외 다른 문자가 있을때 콘솔 창에 뜸.
+
+        // //참조형 데이터 타입  : 1~7제외하고 나머지 다 심화 과정에서 다룰 예정 (자바 배우고나서)
+        // //메모리의 주소 값을 가지고 데이터를 찾는 것.
+        // //원시형 데이터 타입과 메모리 체계가 다름. 참조형은 변수에 메모리주소을 넣음(주소를 참조해서 메모리를 가져옴.)
+        
+        //자료형 변환
+        
+        //문자 -> 숫자 변환
+        let str3 = "12345aaa";
+        let str4 = "123.123";
+
+        console.log(typeof str3);
+        //1.Number()  //소수점 아래의 내용까지 포함해서 데이터를 변환,
+        //숫자에 문자가 포함되면 NaN
+        let num3 = Number(str3);  //Number(): 문자를 숫자로 바꿔주는 함수 
+        let num5 = Number(str4);
+        console.log(typeof num3);
+        console.log(num3);     //NaN으로 나옴 숫자가 아니라고 알려줌.
+        console.log(num5);
+        //2. parseInt() 숫자타입으로 바꿔주는 함수//문자가 있어도 문자를 제외하고 숫자만 출력함.
+        //parseInt()는 정수만 가져오기 때문에 소수점 뒤는 다 떼고 정수부분만 가져옴 
+        let num4 = parseInt(str3);
+        // 참고 console.log(parseFloat(str4));  //float는 소수점을 가져오기 때문에 소수점까지 출력.
+        console.log(num4);  // 문자 제외 하고 숫자만 출력
+        let num6 = parseInt(str4);
+        console.log(num6);  //소수점 다 떨어지고 출력
+        
+        //숫자 -> 문자 변환
+        //1.toString()
+        //num4 = null;  //null,undefined 인식 하지못함.
+
+        let str5 = num4.toString();
+        console.log(typeof str5); // 콘솔 창에서 숫자는 파란색 문자는 검정색
+        console.log(str5); 
+
+        //2.String() >> 많이 사용.
+        num4 = null;
+        let str6 = String(num4);
+        console.log(typeof str6);
+        console.log(str6); 
+
+        //빈문자열 ''
+        //문자, 문자열
+        //문자 'A'
+        //문자열 "ABC"
+        let str7 ='';
+        console.log(str7);
+
+        
+</script>
+
+</body>
+</html>
