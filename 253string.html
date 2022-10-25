@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //🍓문자열을 활용한 반복문 사용.🍓
+        //let str = "hello world"
+
+        // //🍓문자열 자르기
+        // // str.substring(시작하는 위치, 끝나는 위치) 
+        // console.log(str.substring(2.7)); //2~7위치의 문자만 출력하고 공백도 포함.
+        // //문자를 새는것이기 때문에 0부터 시작됨.
+        // //🍓문자 위치 찾기
+        // // str.indexOf()
+        // console.log(str.indexOf('ld'));
+        // //문자가 몇번째에 있는지 알려주고 중복된 문자가 있으면 제일 앞 문자의 위치를 알려줌
+        // //ld의 경우 앞의 문자인 l의 위치를 알려줌.
+        // console.log(str.indexOf('l',4));
+        // //l로 시작하는 위치를 표현 단, 4번째 자리 뒤에서 부터 찾으세요
+        // //str.lastIndexOf('l')
+        // //🍓뒤에서부터 문자를 찾아줌
+        // console.log(str.lastIndexOf('l'))
+        // //🍓구분자를 기준으로 문자를 자르세요.
+        // //str.split();
+        // str2= "hello, bye, yedam"
+        // console.log(str2.split(','));
+        // //🍓문자열 길이
+        // // str.length
+        // console.log(str.length);
+        // //갯수이기 때문에 1부터 시작
+        // //🍓소문자 ->대문자
+        // // str.toUpperCase()
+        // console.log(str.toUpperCase());
+        // //🍓대문자 -> 소문자
+        // // str.toLowerCase()
+        // let str2 = "HELLO"
+        // console.log(str2.toLowerCase());
+        // //🍓맨 끝자리 문자 확인
+        // // str.endsWith()
+        // console.log(str.endsWith('d'));
+        // //끝자리의 문구가 d가 맞는지 물어보고 맞으면 true출력.
+        // //아니면 false출력
+
+        // //🍓str의 길이 만큼 반복문을 실행🍓
+        // for (let i = 0; i < str.length; i++) {
+
+        //     //i = 0 , 시작하는 위치는 0, 끝나는 위치는 1
+        //     //hello world   // _h_ >>잘리는 문자는 h
+        //     if (str.substring(i, i + 1) == "l") {
+        //         console.log("l의 위치는" + (i + 1) + "입니다.");
+        //     }
+        // }
+
+        //❓❓❓❓❓❓❓❓❓문자열을 활용한 반복문
+        //입력받은 수까지 출력합니다.
+        //단, 마지막 자리가 3,6,9로 끝이 나면 *로 표시합니다.
+        //예를 들면 1~20 -> 1,2,*,4,5,*,7,8,*,10
+        // let num = Number(prompt("숫자를 입력하세요"));
+        // for(let i = 1 ; i <num ; i++){
+        //     //lastIndexof사용
+
+        //     if (string(i).lastIndexOf('3') || string(i).lastIndexOf('6')||
+        //      string(i).lastIndexOf('9')){
+        //         //(총 길이-1)-(총길이) 하면 마지막 자리가나옴 
+        //         string(i).substring(
+        //             0,string(i).length-1
+        //             );
+        //             str2 += "*";
+        //     }
+        // }
+
+        // let num = Number(prompt("숫자를 입력하세요"));
+        // for (let i = 1; i <= num; i++) {
+        //     //lastIndexof사용
+        //     let temp = String(i);
+           
+        //     //lastIndexOf검색 > 없다 > -1
+        //     //lastIndexOf 검색 > 있다 > 위치값을 알려줌 (1 이상 데이터)
+        //     //flase = -1  >>-1이 아니면 조건을 판단하게 조건을 걸어줌 
+        //     if(temp.endsWith('3')|| temp.endsWith('6') ||
+        //         temp.endsWith('9')) {
+        //         //(총 길이-1)-(총길이) 하면 마지막 자리가나옴 
+        //         temp = temp.substring(0,temp.length-1);
+        //         temp += "*";
+           
+        // } //❓❓❓❓❓❓❓❓❓❓❓❓
+
+    </script>
+</body>
+
+</html>

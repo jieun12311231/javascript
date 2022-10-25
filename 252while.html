@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //🍓반복문 while문🍓
+        // while(표현식){
+
+        // }
+
+        //덧셈, 짝수, 홀수 
+        //(1)
+        // let sum = 0;  //변수를 {}밖에 선언하는 것이 좋음
+        // while (sum <= 10) {  //항상 반복됨
+        //     sum += 1;
+        //     if (sum >= 10) {
+        //         break;
+        //     }
+        //     // console.log(sum);
+        // }
+        // (2) 같은 식
+        // let flag = true;
+        // sum = 0;
+        // while (flag) {
+        //     sum += 1;
+        //     if (sum == 10) {
+        //         flag = false;
+        //     }
+        // }
+        // console.log(sum);
+        // (3) 같은식
+        // sum = 0;
+        // while (true) {
+        //     sum += 1;
+        //     if (sum == 10) {
+        //         break;
+        //     }
+        // }
+        // console.log(sum);
+
+        //🍓1~100까지 수 중에서 짝수만 출력🍓
+        // let even = 1;
+        // while(even <=100){
+        //     if (even % 2 ==0){
+        //         console.log("1~100사이의 짝수 :" + even)
+        //     }
+        //     even++;
+        // }
+
+        //<같은식>
+        // let even = 0;
+        // while (even <= 100) {
+        //     if (even % 2 == 0 && even != 0) {
+        //         console.log("1~100사이의 짝수 :" + even)
+        //     }
+        //     even++;
+        // }
+        // //🍓구구단🍓
+        // let gugu = 2;
+        // let num = 1;
+        // while (num <= 9) {
+        //     console.log(gugu + "*" + num + "=" + gugu * num);
+        //     num++;
+        // }
+
+        //🍓while문이 활용 되는 경우🍓
+        // flag = true;
+        // while (flag) {
+        //     //메뉴를 출력해주는 무엇인가를 삽입.
+        //     let sign = prompt("메뉴를 선택하세요")
+
+        //     switch (sign) {
+        //         case 1:
+        //             //구구단 구하기
+        //             break;
+        //         case 2:
+        //             //짝수 구하기
+        //             break;
+        //         case 3:
+        //             //홀수 구하기
+        //             break;
+        //         case 4:
+        //             //종료
+        //             flag = flase;
+        //             break;
+        //     }
+        // }
+
+        //🍓do~ while문🍓 //while문을 뒤집어 놓은거 같음 무조건 한번 출력하고 조건을 확인함.
+        // do{
+
+        // }while()
+
+        //예제1
+        // sum = 0;
+        // do {
+        //     sum += 1;
+        // } while (sum < 1);
+        // console.log(sum)
+
+        //예제2 1~100까지의 숫자를 구해보는
+        sum = 0;
+        let temp = 1;
+        do {
+            sum += temp;
+            temp++;
+            // console.log(sum)
+        } while (temp < 100);
+        console.log(sum)
+    </script>
+</body>
+
+</html>

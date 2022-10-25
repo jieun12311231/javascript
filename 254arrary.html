@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //🍓배열🍓// 
+        //"참조형 데이터 타입" >> 방번호를 참조해서 데이터를 가져오는
+        //참조형 타입이라고 함. 주소를 참조하여서 데이터를 가져옴.
+        // let array = [];
+        // //배열에 데이터 추가하는 방법
+        // array.push(1); // array = [1];
+        // array.push("string"); //array = [1,"string"]
+        // array.length  //배열의 개수를 보여줌
+        // console.log(array);
+        // //첫번째 방에 데이터를 넣는 방법
+        // //array.unshift()
+        // array.unshift('3');
+        // //첫번째 방(index)에 있는 데이터를 삭제
+        // //array.shift()
+        // array.shift()
+        // //배열 마지막 index에 데이터 추가
+        // array.push('마지막');
+        // array.push('라이언'); //array= [1,"string",'마지막','라이언']
+        // //제일 마지막방(index)에 있는 데이터 꺼내기
+        // array.pop();  //array= [1,"string",'마지막']
+
+        // //🍓array.splice🍓
+        // //splice(시작 인덱스,삭제할 요소 길이, 추가 할 배열 요소)
+        // //[0,1,2]
+        // array.splice(1, 1, '🍓');
+        // array.splice(1, 1, '💙');   // >>🍓가 💙로 바뀜. 
+
+        //splice(시작 인덱스, 삭제할 요소 길이)
+        // array.splice(1,1);   
+        //index는 0부터 시작하기 때문에 3번째 자리에 있는 데이터가 지워짐
+        //splice를 활용한 배열 데이터 삭제
+
+        //1차원 배열
+        //array = [1,2,3,4, "ddd","ddd"]
+        //2차원 배열 : 배열안에 배열이 있음
+        //array2 = [ [],[],[],[] ]
+        //3차원 배열 : 배열 안에 배열 안에 배열
+        //array3 = [ [ [],[],]]
+
+        // 🍓최종 목표🍓Lotto🍓
+        // 1 줄에 6개 번호 발급
+        // 변수 6개 x > 1개의 배열에 저장해서 쓸 수 있음
+        // [1,2,3,4,5,6] 천원치 로또만 만들어보기 
+        //단, 중복되지 않은 수만 허용해서 배열에 저장한다.
+        // for문, 배열을 활용해서 lotto 만들어 볼수 있음.
+        //let ary2 = []
+        //string
+        //Math(수학)함수 필요
+        //1) Math.random
+        //2) Math. floor > 12.22 내림 함수 이기때문에 12가 됨.
+        console.log(Math.random())  
+        //랜덤으로 실수 값이 나옴 
+        //0 <= 실수 < 1  0.xxxx
+        //0*45 <= 실수 < 1*45 로 바꿔줌
+        //0+1<= 실수 < 45+1
+        //1<= 실수 < 46
+        // console.log(Math.floor(Math.random()*45)+1);  //1~45값중 랜덤값이 출력됨.
+        // while(true){
+        //     if (())
+        // }
+
+
+
+        //🍓배열🍓
+        //배열에 담긴 숫자들 중에서 최대값 최소값 구하는 예제
+        //array = [1,2,3,4,5,6,7,8,9];
+        // let ary = [3,89,4,6,76,43,56]
+        // let max = ary[0];
+        // let min = ary[0];
+        // for (let i = 0; i < ary.length; i++) {      //배열의 시작은 0이기 때문에 i는 꼭 0으로 지장
+        //     //최대값 구하기 
+        //     if (max < ary[i]) {
+        //         max = ary[i];    //현재 내가 최대값을 가지고 있고 , i데이터를 비교 했을때 max보다 큰값이면 최대값이기 때문에 최대값이 출력됨.
+        //     }
+        //     //최소값 구하기 
+            
+        //     if (min > ary[i]){
+        //         min = ary[i]
+        //     }
+        // }
+        //     console.log("최대값 : " + max)
+        //     console.log("최소값 : " + min)
+
+        //     //🍓반복문🍓
+        //     //🍓for in -반복을 할 때 인덱스 값을 가지고 반복
+        //     console.log(ary.length);
+        //     for(let index in ary){    
+        //         //let index : let은 index값을 받는 변수 지금은 index8개(0부터 7개) 
+        //         //배열의 index를 가져오는 반복문, DOM만드는데도 활용이 됨.
+        //         // console.log(index);
+        //         // console.log(ary[index]);
+                
+        //     }
+
+        //     //🍓for of - 반복을 할 때 데이터를 가지고 반복.
+        //     //[3,89,4,6,76,43,56] 배열의 데이터를 하나씩 축출해서 사용
+        //     for(let obj of ary){  
+        //         console.log(obj)
+        //     }
+
+        //     //🍓split
+        //     let str = "12,55,99,33,66,Hi,kk";
+        //     let strAry = str.split(',');  
+        //     console.log(strAry);
+        //     //,기준으로 데이터를 다 잘라서 배열의 index에 넣음
+        //     //,외에 다른 문자로도 가능 . / 등등
+
+            
+
+    </script>
+</body>
+
+</html>
